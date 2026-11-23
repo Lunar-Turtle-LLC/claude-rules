@@ -14,7 +14,7 @@ The golden copy of the core Claude Code rules shared by every Lunar Turtle repo.
 | `rules/swift.md` | `*.swift`, Xcode projects | Style guides, tooling, Swift conventions |
 | `rules/rails-style-api.md` | Route table, controllers, services, repositories, models | Rails-style layering, static classes, route table conventions |
 | `rules/design.md` | `*.tsx`, `*.css`, `*.swift` | The Apple Notes design principles for every app and site |
-| `rules/web-design.md` | `*.tsx`, `*.css` | How those principles look on a Tailwind site with the charcoal and copper tokens |
+| `rules/web-design.md` | `*.tsx`, `*.css` | The shared layout of the Lunar Turtle sites: shell, pages, lists, type and controls |
 
 Each file is scoped by file type or folder in its `paths` frontmatter, so a repo only loads what fits it. The API never loads the design rules, and Tossback never loads the TypeScript or web rules.
 
