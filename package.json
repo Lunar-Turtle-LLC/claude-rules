@@ -1,0 +1,10 @@
+{
+  "name": "claude-rules",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "sync": "node scripts/sync.mjs"
+  }
+}

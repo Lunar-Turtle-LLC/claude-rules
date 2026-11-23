@@ -1,0 +1,46 @@
+{
+  "repos": [
+    {
+      "name": "Lunar-Turtle-LLC/lunar-turtle-tools",
+      "tokenSecret": "SYNC_TOKEN_LUNAR_TURTLE_LLC",
+      "stacks": ["typescript", "web"],
+      "paths": {
+        "shared/rules/design.md": ["apps/dashboard/src/**/*.tsx", "apps/dashboard/src/**/*.css"],
+        "stacks/web/rules/design.md": ["apps/dashboard/src/**/*.tsx", "apps/dashboard/src/**/*.css"]
+      }
+    },
+    {
+      "name": "Lunar-Turtle-LLC/lunar-turtle-api",
+      "tokenSecret": "SYNC_TOKEN_LUNAR_TURTLE_LLC",
+      "stacks": ["typescript"],
+      "exclude": ["shared/rules/design.md"],
+      "paths": {}
+    },
+    {
+      "name": "Lunar-Turtle-LLC/lunar-turtle-marketing-site",
+      "tokenSecret": "SYNC_TOKEN_LUNAR_TURTLE_LLC",
+      "stacks": ["typescript", "web"],
+      "paths": {
+        "shared/rules/design.md": ["src/**/*.tsx", "src/**/*.css"],
+        "stacks/web/rules/design.md": ["src/**/*.tsx", "src/**/*.css"]
+      }
+    },
+    {
+      "name": "khendricks/sleep-sounds",
+      "tokenSecret": "SYNC_TOKEN_KHENDRICKS",
+      "stacks": ["typescript", "web"],
+      "paths": {
+        "shared/rules/design.md": ["src/**/*.tsx", "src/**/*.css"],
+        "stacks/web/rules/design.md": ["src/**/*.tsx", "src/**/*.css"]
+      }
+    },
+    {
+      "name": "Lunar-Turtle-LLC/tossback-games",
+      "tokenSecret": "SYNC_TOKEN_LUNAR_TURTLE_LLC",
+      "stacks": [],
+      "paths": {
+        "shared/rules/design.md": ["Tossback/**/*.swift", "TossbackMessages/**/*.swift"]
+      }
+    }
+  ]
+}
