@@ -1,3 +1,9 @@
+---
+paths:
+  - "**/*.ts"
+  - "**/*.tsx"
+---
+
 # TypeScript
 
 - Strict typing. Avoid `any`; if it's truly needed, justify it in a short inline comment.

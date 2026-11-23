@@ -1,6 +1,13 @@
+---
+paths:
+  - "**/*.tsx"
+  - "**/*.css"
+  - "**/*.swift"
+---
+
 # Design: quiet like Apple Notes
 
-Every Lunar Turtle app and site should feel as quiet as Apple Notes: content first, almost no chrome, and nothing on screen that the visitor didn't come for. The platform rule and the repo's own design rule say how this looks in that codebase. Where they are more specific, follow them.
+Every Lunar Turtle app and site should feel as quiet as Apple Notes: content first, almost no chrome, and nothing on screen that the visitor didn't come for. The web design rule and the repo's own design rule say how this looks in that codebase. Where they are more specific, follow them.
 
 ## How Apple Notes is built
 

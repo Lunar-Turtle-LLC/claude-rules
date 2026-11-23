@@ -1,6 +1,12 @@
+---
+paths:
+  - "**/*.tsx"
+  - "**/*.css"
+---
+
 # Web design
 
-How the shared Apple Notes design rule applies to a Lunar Turtle website built with Tailwind and the shared charcoal and copper tokens.
+How the Apple Notes design rule applies to a Lunar Turtle website built with Tailwind and the shared charcoal and copper tokens.
 
 ## Pages
 
