@@ -11,10 +11,11 @@ The golden copy of the core Claude Code rules shared by every Lunar Turtle repo.
 | `rules/logging.md` | Everything | When to log, what a line says, what never to log |
 | `rules/writing-rules.md` | Everything | Where rules live and how to write them so they stay true |
 | `rules/typescript.md` | `*.ts`, `*.tsx` | Strict types, typed results, logic modules |
+| `rules/rails-style-api.md` | Route table, controllers, services, repositories, models | Rails-style layering, static classes, route table conventions |
 | `rules/design.md` | `*.tsx`, `*.css`, `*.swift` | The Apple Notes design principles for every app and site |
 | `rules/web-design.md` | `*.tsx`, `*.css` | How those principles look on a Tailwind site with the charcoal and copper tokens |
 
-Each file is scoped by file type in its `paths` frontmatter, so a repo only loads what fits it. The API never loads the design rules, and Tossback never loads the TypeScript or web rules.
+Each file is scoped by file type or folder in its `paths` frontmatter, so a repo only loads what fits it. The API never loads the design rules, and Tossback never loads the TypeScript or web rules.
 
 Rules that only one repo needs, such as the API's architecture or Tossback's palettes, stay in that repo's `.claude/rules/`.
 
