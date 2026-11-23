@@ -12,6 +12,13 @@ Build behaviour test first, and test it thoroughly. The repo's own testing rule 
 - Cover the success path, every error or failure branch, edge cases (empty, maximum, boundary values, unexpected input) and each state a screen or component can show (loading, empty, error, ready).
 - A change that adds behaviour without tests isn't done, even if CI is green.
 
+## Where tests live
+
+- Tests never go in the source folder. They live in the repo's test folder (or test target), separate from the code they test.
+- The test folder mirrors the source tree: the tests for `<source>/<path>/<Name>` live at `<tests>/<path>/`, named after the file they test. Moving or renaming a source file tells you exactly which tests move with it.
+- A file has at most one unit test file and one integration test file, side by side in the mirrored folder.
+- Shared helpers, setup and factories live in a support folder inside the test folder, never in `src` and never in a test file.
+
 ## Unit and integration tests
 
 - **Unit tests** check one module on its own, with its collaborators stubbed and small made-up data. Every logic module gets them, and they cover each branch.
@@ -34,5 +41,4 @@ Build behaviour test first, and test it thoroughly. The repo's own testing rule 
 - Keep tests fast, isolated and deterministic, with one reason to fail. No real network, timers or randomness in assertions: stub them.
 - Prefer small, focused assertions over snapshot tests.
 - Use small, synthetic fixtures. Never commit real personal data, keys or tokens, even in tests.
-- Helpers shared by several tests live in the test support folder, never in a test file.
 - Never skip, focus, delete or loosen a test to get a green run. Fix the code or the test.
