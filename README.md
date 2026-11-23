@@ -8,6 +8,7 @@ The golden copy of the core Claude Code rules shared by every Lunar Turtle repo.
 |------|------------|--------|
 | `rules/coding-standards.md` | Everything | Principles, functions and modules, reusable logic, errors, cleanliness |
 | `rules/testing.md` | Everything | TDD, unit and integration tests, tests that don't go stale, hygiene |
+| `rules/logging.md` | Everything | When to log, what a line says, what never to log |
 | `rules/writing-rules.md` | Everything | Where rules live and how to write them so they stay true |
 | `rules/typescript.md` | `*.ts`, `*.tsx` | Strict types, typed results, logic modules |
 | `rules/design.md` | `*.tsx`, `*.css`, `*.swift` | The Apple Notes design principles for every app and site |
