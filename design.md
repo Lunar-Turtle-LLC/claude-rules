@@ -7,7 +7,7 @@ paths:
 
 # Design: quiet like Apple Notes
 
-Every Lunar Turtle app and site is quiet. Kyle wants them to feel like Apple Notes, and like each other: content first, almost no chrome, and nothing on screen that the visitor didn't come for. The web design rule and the repo's own design rule say how this looks in that codebase. Where they are more specific, follow them.
+Every Lunar Turtle app and site is quiet. Kyle wants them to feel like Apple Notes, and like each other: content first, almost no chrome, and nothing on screen that the visitor didn't come for. The web design rule and the repo's `CLAUDE.md` say how this looks in that codebase. Where they are more specific, follow them.
 
 ## How Apple Notes is built
 
@@ -36,7 +36,7 @@ These are the traits worth copying, drawn from the app itself and Apple's Human 
 
 - The accent colour is for the one main action on a page or screen. Don't use it for headline words, tags, badges, icon tints, hover states or selected states.
 - Selected and toggled states use the secondary surface with primary text.
-- Use the colour tokens the codebase already defines. Don't add a colour outside the place the platform or repo rule allows.
+- Use the colour tokens the codebase already defines. Don't add a colour outside the place the web design rule or the repo's `CLAUDE.md` allows.
 
 ## Copy
 
