@@ -1,6 +1,6 @@
 # Testing and test-driven development
 
-Build behaviour test first, and test it thoroughly. The repo's own testing rule says where tests live and how files are named.
+Build behaviour test first, and test it thoroughly. The repo's `CLAUDE.md` gives its test folder and file names.
 
 ## Red, green, refactor
 
@@ -23,7 +23,7 @@ Build behaviour test first, and test it thoroughly. The repo's own testing rule 
 
 - **Unit tests** check one module on its own, with its collaborators stubbed and small made-up data. Every logic module gets them, and they cover each branch.
 - **Integration tests** drive several real parts together through a public entry point, the way a user or client would, stubbing only what leaves the process (network, clock, randomness). Every screen, component or endpoint with user-facing behaviour gets them.
-- Keep unit and integration tests in separate files. Integration test files carry an `IT` marker in their name, in the form the repo's testing rule gives.
+- Keep unit and integration tests in separate files. Integration test files carry an `IT` marker in their name, in the form the repo's `CLAUDE.md` gives.
 - Don't test the same branch at both levels. Unit tests cover the branches; integration tests prove the pieces are wired together and cover each outcome a caller can see.
 
 ## Tests that don't go stale

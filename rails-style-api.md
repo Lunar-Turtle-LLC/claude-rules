@@ -11,7 +11,7 @@ paths:
 
 # Rails-style API layout
 
-Backend code is laid out like a Rails app so it reads familiarly: a route table, a controller per resource, service objects for business rules, and models. Rails' ActiveRecord is split in two: models hold types and validation, and repositories hold the queries. The repo's own architecture rule maps this onto its platform.
+Backend code is laid out like a Rails app so it reads familiarly: a route table, a controller per resource, service objects for business rules, and models. Rails' ActiveRecord is split in two: models hold types and validation, and repositories hold the queries. The repo's `CLAUDE.md` maps this onto its platform.
 
 | Rails | Here | Owns | Must not |
 |-------|------|------|----------|
