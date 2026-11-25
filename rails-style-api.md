@@ -85,6 +85,6 @@ export function findRoute(pathname: string): RouteHandler | null {
 - Expected failures are typed results at every layer (`{ ok: true, ... } | { ok: false, code }`). Controllers map each `code` to a response with an exhaustive `switch`. Repositories throw only on unexpected I/O errors, and the controller catches those.
 - Response bodies are built only in controllers. A response shape two controllers share lives next to them in `src/controllers/`.
 - Logic starts in its feature's service folder. When a second feature needs it, move it to `src/lib/` (cross-cutting) or a shared service in the same change.
-- Models sit in the same feature folders as services. A model a second feature needs moves to `src/models/shared/` in the same change.
+- Name each feature folder after the product or tool it serves, in full (`<toolName>`, not a shortened word), so the folder says which tool it is for. Models sit in the same feature folders as services. A model a second feature needs moves to `src/models/shared/` in the same change.
 - A migration that changes a table is paired with changes to that table's repository and model in the same change.
 - Test services by stubbing repository methods, test repositories against real local storage, and test controllers end to end through the app's entry point.
