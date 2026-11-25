@@ -19,7 +19,7 @@ Backend code is laid out like a Rails app so it reads familiarly: a route table,
 | `app/controllers/` | `src/controllers/<version>/<resource>Controller.ts` | Read the request, call one service method, map its result to a response | Contain queries, storage calls or business rules |
 | Service objects | `src/services/<feature>/<thing>Service.ts` | Business rules | Touch a database or storage binding, or build a response |
 | ActiveRecord queries | `src/repositories/<thing>Repository.ts` | Every query and storage call for one table or bucket, returning model types | Make business decisions or call services |
-| ActiveRecord attributes and validations | `src/models/<thing>.ts` | Domain types, request and row shapes, and pure parse and validate functions | Do I/O or import from the other layers |
+| ActiveRecord attributes and validations | `src/models/<feature>/<thing>.ts` | Domain types, request and row shapes, and pure parse and validate functions | Do I/O or import from the other layers |
 | `app/jobs/` | `src/cron/jobs/` | Scheduled work, registered by schedule | Contain business rules; call a service instead |
 | Background workers | `src/queues/` | Queue messages, registered by queue name: parse, call a service, ack or retry | Contain business rules; call a service instead |
 | `lib/` | `src/lib/` | Small cross-cutting helpers | Know about a feature |
@@ -85,5 +85,6 @@ export function findRoute(pathname: string): RouteHandler | null {
 - Expected failures are typed results at every layer (`{ ok: true, ... } | { ok: false, code }`). Controllers map each `code` to a response with an exhaustive `switch`. Repositories throw only on unexpected I/O errors, and the controller catches those.
 - Response bodies are built only in controllers. A response shape two controllers share lives next to them in `src/controllers/`.
 - Logic starts in its feature's service folder. When a second feature needs it, move it to `src/lib/` (cross-cutting) or a shared service in the same change.
+- Models sit in the same feature folders as services. A model a second feature needs moves up to `src/models/` itself in the same change.
 - A migration that changes a table is paired with changes to that table's repository and model in the same change.
 - Test services by stubbing repository methods, test repositories against real local storage, and test controllers end to end through the app's entry point.
