@@ -19,7 +19,7 @@ This README lives in `.github/` so GitHub still shows it, and its `paths` frontm
 | `writing-rules.md` | Everything | Shared rules versus a repo's own rules, and how to write rules so they stay true |
 | `typescript.md` | `*.ts`, `*.tsx` | Strict types, typed results, logic modules |
 | `swift.md` | `*.swift`, Xcode projects | Style guides, tooling, Swift conventions |
-| `rails-style-api.md` | Route table, controllers, services, repositories, models | Rails-style layering, static classes, route table conventions |
+| `rails-style-api.md` | Route table, controllers, services, repositories, models | Rails-style layering, static classes, model objects, route table conventions |
 | `design.md` | `*.tsx`, `*.css`, `*.swift` | The Apple Notes design principles for every app and site |
 | `web-design.md` | `*.tsx`, `*.css` | The shared, quiet layout of the Lunar Turtle sites: shell, pages, lists, type and controls |
 
