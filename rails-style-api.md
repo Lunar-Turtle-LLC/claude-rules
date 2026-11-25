@@ -86,6 +86,16 @@ export class Thing {
 - Small values that are part of a thing, such as its line items, are classes of their own when they have behaviour, and live in the same file.
 - A pure helper with no thing behind it, such as parsing a page number, stays a plain function.
 
+## Fat models, skinny controllers, focused services
+
+Each layer has one kind of job, so none of them bloats:
+
+- **Controllers stay skinny:** read the request, call one service method, map its result to a response. Nothing else.
+- **Models are fat:** every rule about one thing's own fields lives on its model: what is valid, what counts as done, totals and other derived values, and how it changes.
+- **Services are use cases:** load what the use case needs through repositories, ask the models, save through repositories, and return a typed result. A service keeps only the rules a model can't answer alone, because they need storage or more than one thing, such as a limit counted across rows or a reference to another table.
+- If a service checks or changes a thing's own fields, move that logic onto the model. If a service method is only a call to a model and a repository with no rule of its own, keep it thin rather than adding to it.
+- One service per resource or use case, named after it. Merge services that serve the same resource; split one whose methods serve unrelated resources.
+
 ## The route table
 
 The route table is the one place to read what the API exposes, top to bottom, like `config/routes.rb`.
